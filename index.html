@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keysight Network Test Solutions · Sales Enablement Hub</title>
+
+  <!-- Keysight brand font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- App styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- React 18 + Babel (CDN — no build tools required) -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!--
+    LOAD ORDER MATTERS:
+    1. data/config.js   — verticals, products, colors, helper functions
+    2. data/use-cases.js — all USE_CASES array entries
+    3. components        — UI building blocks (depend on data)
+    4. App.jsx           — main app (depends on everything above)
+  -->
+
+  <!-- 1. Configuration & data -->
+  <script type="text/babel" src="data/config.js"></script>
+  <script type="text/babel" src="data/use-cases.js"></script>
+
+  <!-- 2. UI Components -->
+  <script type="text/babel" src="js/components/Layout.jsx"></script>
+  <script type="text/babel" src="js/components/UseCaseCard.jsx"></script>
+  <script type="text/babel" src="js/components/MatrixView.jsx"></script>
+
+  <!-- 3. Main App -->
+  <script type="text/babel" src="js/App.jsx"></script>
+</body>
+</html>
